@@ -37,22 +37,7 @@
     </form>
     <div class="output-container">
       <h3 class="output-heading">Output</h3>
-      <table class="output-table">
-        <thead>
-          <tr>
-            <th>IP Address</th>
-            <th>Config Status</th>
-            <th>Config Log</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let device of outputJson">
-            <td>{{ device.ip }}</td>
-            <td>{{ device.config_status }}</td>
-            <td>{{ device.config_log }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <pre class="output-json">{{ outputJson }}</pre>
     </div>
   </div>
   
