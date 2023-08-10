@@ -1,0 +1,58 @@
+<div class="form-container">
+    <h2 class="form-heading">Configure Device</h2>
+    <form (ngSubmit)="submitForm()" #configForm="ngForm" class="config-form">
+      <div class="form-group">
+        <label for="ipAddresses">IP Addresses</label>
+        <textarea id="ipAddresses" name="ipAddresses" [(ngModel)]="ipAddresses" required rows="5"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"  [(ngModel)]="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="threadNumber">Thread Number</label>
+        <input type="number" id="threadNumber" name="threadNumber"  [(ngModel)]="threadNumber" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="deviceType">Device Type</label>
+        <input type="text" id="deviceType" name="deviceType"  [(ngModel)]="deviceType" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="configCommand">Configuration Commands </label>
+        <textarea id="configCommand" name="configCommand" [(ngModel)]="configCommand" required rows="5"></textarea>
+      </div>
+  
+      <button type="submit" [disabled]="!configForm.valid || loading" class="submit-button">
+        {{ loading ? 'Loading...' : 'Submit' }}
+      </button>
+    </form>
+    <div class="output-container">
+      <h3 class="output-heading">Output</h3>
+      <table class="output-table">
+        <thead>
+          <tr>
+            <th>IP Address</th>
+            <th>Config Status</th>
+            <th>Config Log</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let device of outputJson">
+            <td>{{ device.ip }}</td>
+            <td>{{ device.config_status }}</td>
+            <td>{{ device.config_log }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
