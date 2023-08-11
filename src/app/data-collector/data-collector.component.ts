@@ -44,7 +44,7 @@ export class DataCollectorComponent implements OnInit {
       threadNumber: this.threadNumber
     };
 
-    const url = 'http://127.0.0.1:8000/api/data-collector/'; // Replace with your actual API URL
+    const url = 'http://100.65.212.39:5556/api/data-collector/'; // Replace with your actual API URL
 
     this.http.post(url, formValues).subscribe(
       (response: any) => {
