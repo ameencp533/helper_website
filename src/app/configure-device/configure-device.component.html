@@ -23,7 +23,13 @@
   
       <div class="form-group">
         <label for="deviceType">Device Type</label>
-        <input type="text" id="deviceType" name="deviceType"  [(ngModel)]="deviceType" required>
+        <select class="form-control" id="deviceType" name="deviceType" [(ngModel)]="formData.deviceType">
+          <option value="router">cisco_xr</option>
+          <option value="router">cisco_ios</option>
+          <option value="router">huawei</option>
+          <option value="router">ciena_saos</option>
+          <!-- Add more options as needed -->
+        </select>
       </div>
   
       <div class="form-group">
@@ -37,7 +43,7 @@
     </form>
     <div class="output-container">
       <h3 class="output-heading">Output</h3>
-      <pre class="output-json">{{ outputJson }}</pre>
+      <pre>{{outputJson}}</pre>
     </div>
   </div>
   
