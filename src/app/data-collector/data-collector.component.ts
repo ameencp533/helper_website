@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { SafeHtml } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-configure-device',
-  templateUrl: './configure-device.component.html',
-  styleUrls: ['./configure-device.component.css']
+  selector: 'app-data-collector',
+  templateUrl: './data-collector.component.html',
+  styleUrls: ['./data-collector.component.css']
 })
-export class ConfigureDeviceComponent implements OnInit {
+export class DataCollectorComponent implements OnInit {
   formData: any = {
     // Initialize deviceType with a default value
     deviceType: 'cisco_ios'
@@ -44,7 +44,7 @@ export class ConfigureDeviceComponent implements OnInit {
       threadNumber: this.threadNumber
     };
 
-    const url = 'http://127.0.0.1:8000/api/configure-device/'; // Replace with your actual API URL
+    const url = 'http://127.0.0.1:8000/api/data-collector/'; // Replace with your actual API URL
 
     this.http.post(url, formValues).subscribe(
       (response: any) => {

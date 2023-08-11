@@ -7,12 +7,14 @@ import { ConfigureDeviceComponent } from './configure-device/configure-device.co
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DataCollectorComponent } from './data-collector/data-collector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConfigureDeviceComponent,
-    HomeComponent
+    HomeComponent,
+    DataCollectorComponent
   ],
   imports: [
     BrowserModule,

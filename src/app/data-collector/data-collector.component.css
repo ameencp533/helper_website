@@ -1,0 +1,55 @@
+/* Apply a different color theme */
+.data-collector-container {
+    background-color: #8f2323; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    color: #ac1414;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff; /* Blue focus border */
+  }
+  
+  .submit-button {
+    background-color: #007bff; /* Blue button background */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+    font-weight: bold;
+  }
+  
+  .submit-button:hover {
+    background-color: #01060a; /* Darker blue when hovering */
+  }
+  
